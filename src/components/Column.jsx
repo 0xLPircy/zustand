@@ -1,8 +1,11 @@
 import React from 'react';
 import "./column.css";
 import Task from "./Task.jsx";
+import { useStore } from '../store';
 
 const Column = ({ state }) => {
+    const tasks = useStore(store => store.tasks.filter(task => task.state === state))
+
     return (
         <div className="column">
             <p>{state}</p>

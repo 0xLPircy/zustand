@@ -3,5 +3,33 @@
     border-radius: 4px;
     min-height: 5rem;
     color: #1e1e1e;
-    padding: 4.5rem;
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottomWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status {
+    font-size: small;
+    background: #5e5d5d;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.PLANNED {
+    background: #5e5d5d;
+}
+
+.ONGOING {
+    background: #bf3c3c;
+
+}
+
+.DONE {
+    background: #45c149;
 }

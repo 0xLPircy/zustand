@@ -1,0 +1,15 @@
+import { create } from "zustand";
+const store = (set) => ({
+    task: [{ title: 'TestTask', state: 'PLANNED' }],
+});
+
+export const useStore = create(store);
+
+//we then import use store in components and use that
+
+import { shallow } from 'zutand/shallow';
+const tasks = useStore(
+    (store) => store.tasks.filter((task) => task.state === state),
+    shallow
+)
+//shallow checks if content of array changed not if array changed and then rerenders

@@ -34,3 +34,8 @@
 .DONE {
     background: #45c149;
 }
+
+.task img {
+    height: 1rem;
+    cursor: pointer;
+}

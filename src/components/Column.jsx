@@ -8,6 +8,10 @@ const Column = ({ state }) => {
 
     return (
         <div className="column">
+            <div className="titleWrapper">
+                <p>{state}</p>
+                <button>Add</button>
+            </div>
             <p>{state}</p>
             {tasks.map((task) => <Task title={task.title} key={task.title} />)}
         </div>

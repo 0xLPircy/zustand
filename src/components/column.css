@@ -8,3 +8,23 @@
     border-radius: 6px;
     padding: 3rem;
 }
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleWrapper button {
+    all: unset;
+    color: #1d1d1d;
+    background: #f2f2f2;
+    padding: 0.5rem;
+    border-radius: 4px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.titleWrapper button:hover {
+    background: #a5a5a5;
+}

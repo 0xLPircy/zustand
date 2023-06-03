@@ -9,6 +9,10 @@
     padding: 3rem;
 }
 
+.column.drop {
+    border: dashed white 1px;
+}
+
 .titleWrapper {
     display: flex;
     justify-content: space-between;

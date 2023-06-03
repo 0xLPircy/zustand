@@ -12,4 +12,18 @@ const store = (set) => ({
     moveTask: (title, state) => set((store) => ({ tasks: store.tasks.map(task => task.title === title ? { title, state } : task) }))
 });
 
-export const useStore = create(persist(devtools(store), { name: "store" }));
+// custom wrapper to log every state change
+const log = (config) => (set, get, api) => config(
+    (...args) => {
+        const current = get();
+        if (!current) {
+            // get state from external source custom source
+        }
+        console.log(args);
+        set(...args)
+    },
+    get,
+    api
+)
+
+export const useStore = create(log(persist(devtools(store), { name: "store" })));

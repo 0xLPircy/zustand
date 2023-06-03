@@ -14,7 +14,15 @@ const tasks = useStore(
 )
 //shallow checks if content of array changed not if array changed and then rerenders
 
+devtools usage: import upar and in the export
+eg:export const useStore = create(devtools(store));
+
 set function takes multiple params
 1. store: where evrything is saved
 2. bool:tells  if whole store change or just the changed elements given, true false respectively
 3.Label: in redux dev tools, gives info by using the laben on occurance
+
+
+persist: for storaing in local storage and prevent loss.
+usage: export const useStore = create(persist(devtools(store), { name: "store" }));
+name works as key for local storage;
